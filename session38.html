@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 38</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+        img{
+            width: 300px;
+            border: 4px solid white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Riddle App</h1>
+        <h2 id="score">0</h2>
+    </header>
+    <h4>1. What has to be broken before you can use it?</h4>
+    <input type="text" name="" id="q1">
+    <button onclick="q1()">submit</button>
+    <button onclick="h1()">hint</button>
+    <h5 id="a1"></h5>
+    <img id="i1" src="" alt="">
+
+    <h4>2.  Im tall when Im young, and Im short when Im old. What am I?</h4>
+    <input type="text" name="" id="q2">
+    <button onclick="q2()">submit</button>
+    <button onclick="h2()">hint</button>
+    <h5 id="a2"></h5>
+    <img id="i2" src="" alt="">
+
+    <h4>3. What is full of holes but still holds water?</h4>
+    <input type="text" name="" id="q3">
+    <button onclick="q3()">submit</button>
+    <button onclick="h3()">hint</button>
+    <h5 id="a3"></h5>
+    <img id="i3" src="" alt="">
+    
+</body>
+<script>
+    var temp1=false;
+    var temp2=false;
+    var temp3=false;
+    var score = 0;
+
+    function h1(){
+        document.getElementById("i1").src = "https://cdn.pixabay.com/photo/2016/11/18/14/39/beans-1834984__480.jpg";
+        score = score - 0.5;
+        document.getElementById("score").innerText = score;
+    }
+    function h2(){
+        document.getElementById("i2").src = "https://cdn.pixabay.com/photo/2013/11/12/01/47/candles-209157__480.jpg";
+        score = score - 0.5;
+        document.getElementById("score").innerText = score;
+    }
+    function h3(){
+        document.getElementById("i3").src = "https://cdn.pixabay.com/photo/2014/02/17/12/33/cleaning-268068__480.jpg";
+        score = score - 0.5;
+        document.getElementById("score").innerText = score;
+    }
+
+    function q1(){
+        var q1 = document.getElementById("q1").value;
+        if(q1.toUpperCase() == "EGG"){
+            if(temp1 == false){
+                score  = score + 1;
+            document.getElementById("a1").innerText = 
+            "correct answer";
+            document.getElementById("score").innerText = 
+            score;
+                temp1 = true
+            }
+           
+        }
+        else{
+            document.getElementById("a1").innerText = 
+            "wrong answer"
+        }
+    }
+
+    function q2(){
+        var q2 = document.getElementById("q2").value;
+        if(q2.toUpperCase() == "CANDLE"){
+            if(temp2 == false){
+                score  = score + 1;
+            document.getElementById("a2").innerText = 
+            "correct answer";
+            document.getElementById("score").innerText = 
+                score;
+                temp2 = true;
+            }
+            
+        }
+        else{
+            document.getElementById("a2").innerText = 
+            "wrong answer"
+        }
+    }
+
+    function q3(){
+        var q3 = document.getElementById("q3").value;
+        if(q3.toUpperCase() == "SPONGE"){
+            if(temp3 == false){
+                score  = score + 1;
+            document.getElementById("a3").innerText = 
+            "correct answer";
+            document.getElementById("score").innerText = 
+                score;
+                temp3 = true;
+            }
+            
+        }
+        else{
+            document.getElementById("a3").innerText = 
+            "wrong answer"
+        }
+    }
+</script>
+</html>

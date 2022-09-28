@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 35</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+            background-color: yellow;
+            border-radius: 10px;
+            border: none;
+            color: orange;
+        }
+        div{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+        <h2 id="score"></h2>
+    </header>
+    <div>
+        <h2>Answer</h2>
+        <h4>1. Which is the most populated country in the world?</h4>
+        <h5>China</h5>
+        <h4>2. Which is the largest mammal in the world?</h4>
+        <h5>Blue Whale</h5>
+        <h4>3. How many countries are there in the world?</h4>
+        <h5>195</h5>
+        <h4>4. Which is the largest planet in the solar system?</h4>
+        <h5>Jupiter</h5>
+        <h4>5. Which planet is the closest to the sun?</h4>
+        <h5>Mercury</h5>
+    </div>
+    <a href="file:///Users/jaykrishna/Documents/WebD/Level%201/Hardik/Session%2035%20and%2036/session35.html"><button>Play Again</button></a>
+    
+</body>
+<script>
+        document.getElementById("score").innerText = 
+        localStorage.score;
+</script>
+</html>

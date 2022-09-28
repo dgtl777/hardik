@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 35</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+            background-color: yellow;
+            border-radius: 10px;
+            border: none;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+    </header>
+    <h4>1. Which is the most populated country in the world?</h4>
+    <label for="">1. India</label>
+    <input type="radio" name="country" id="" value="india">
+    <label for="">2. China</label>
+    <input type="radio" name="country" id="" value="china">
+    <label for="">3. Australia</label>
+    <input type="radio" name="country" id="" value="australia">
+    <label for="">4. Canada</label>
+    <input type="radio" name="country" id="" value="canada">
+    <h4>2. Which is the largest mammal in the world?</h4>
+    <label for="">1. Blue Whale</label>
+    <input type="radio" name="mammal" id="" value="whale">
+    <label for="">2. Elephant</label>
+    <input type="radio" name="mammal" id="" value="elephant">
+    <label for="">3. Hippo</label>
+    <input type="radio" name="mammal" id="" value="hippo">
+    <label for="">4. Monkey</label>
+    <input type="radio" name="mammal" id="" value="monkey">
+    <h4>3. How many countries are there in the world?</h4>
+    <label for="">1. 200</label>
+    <input type="radio" name="world" id="" value="200">
+    <label for="">2. 195</label>
+    <input type="radio" name="world" id="" value="195">
+    <label for="">3. 300</label>
+    <input type="radio" name="world" id="" value="300">
+    <label for="">4. 110</label>
+    <input type="radio" name="world" id="" value="110">
+    <h4>4. Which is the largest planet in the solar system?</h4>
+    <label for="">1. Earth</label>
+    <input type="radio" name="planet" id="" value="earth">
+    <label for="">2. Mercury</label>
+    <input type="radio" name="planet" id="" value="mercury">
+    <label for="">3. Jupiter</label>
+    <input type="radio" name="planet" id="" value="jupiter">
+    <label for="">4. Saturn</label>
+    <input type="radio" name="planet" id="" value="saturn">
+    <h4>5. Which planet is the closest to the sun?</h4>
+    <label for="">Mercury</label>
+    <input type="radio" name="sun" id="" value="mercury">
+    <label for="">Venus</label>
+    <input type="radio" name="sun" id="" value="venus">
+    <label for="">Jupiter</label>
+    <input type="radio" name="sun" id="" value="jupiter">
+    <label for="">Saturn</label>
+    <input type="radio" name="sun" id="" value="saturn"><br><br>
+    <a href="file:///Users/jaykrishna/Documents/WebD/Level%201/Hardik/Session%2035%20and%2036/answer.html"><button onclick="submitanswer()">submit</button></a>
+</body>
+<script>
+    var score  = 0;
+    function submitanswer(){
+        var q1 = document.
+        querySelector('input[name = "country"]:checked').value;
+        if(q1 == "china"){
+            score  = score + 1
+        }
+
+        var q2 = document.
+        querySelector('input[name = "mammal"]:checked').value;
+        if(q2 == "whale"){
+            score  = score + 1
+        }
+
+        var q3 = document.
+        querySelector('input[name="world"]:checked').value;
+        if(q3 == "195"){
+            score = score + 1;
+        }
+
+        var q4 = document.
+        querySelector('input[name="planet"]:checked').value;
+        if(q4 == "jupiter"){
+            score = score + 1;
+        }
+
+        var q5 = document.
+        querySelector('input[name="sun"]:checked').value;
+        if(q5 == "mercury"){
+            score = score + 1;
+        }
+
+        localStorage.score = 
+        score;
+
+    }
+</script>
+</html>

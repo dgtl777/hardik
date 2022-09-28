@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 34</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(palegreen,green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: green;
+        }
+        input{
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 5px inset greenyellow;
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+            background-color: greenyellow;
+            border: none;
+            border-radius: 5px;
+            color: green;
+        }
+        h3:nth-child(even){
+            background-color: yellowgreen;
+           
+        }
+        h3:nth-child(odd){
+            background-color: greenyellow;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Multiplication Table</h1>
+    </header>
+    <input type="text" name="" id="num" placeholder="Enter Nubmer">
+    <input type="text" name="" id="mul" placeholder="Enter Multiple"><br><br>
+    <button onclick="calculate()">Calculate</button>
+    
+</body>
+<script>
+    function calculate(){
+        var num = document.getElementById("num").value;
+        var mul = document.getElementById("mul").value;
+
+        var count = 1;
+        while(count<=mul){
+            var result = num * count;
+            var text = num + " X " + count + " = " + result;
+            var element = document.createElement("h3");
+            element.innerText = text;
+            document.body.append(element);
+            count = count + 1;
+        }
+    }
+</script>
+</html>
